@@ -1,19 +1,19 @@
-"use client";
+"use client"
 
-import Image from "next";
-import { signOut } from "next-auth/react";
-import Link from "next/link";
+import Image from "next/image"
+import { signOut } from "next-auth/react"
+import Link from "next/link"
 
 type User = {
-  image: String;
-};
+  image: string
+}
 
 export default function Logged({ image }: User) {
   return (
-    <li className="flex items-center gap-8">
+    <li className="flex gap-8 items-center">
       <button
+        className="bg-gray-700 text-white text-sm px-6 py-2 rounded-md "
         onClick={() => signOut()}
-        className="p-1 text-sm text-white rounded bg-slate-800 hover:shadow"
       >
         Sign Out
       </button>
@@ -21,12 +21,12 @@ export default function Logged({ image }: User) {
         <Image
           width={64}
           height={64}
+          className="w-14 rounded-full"
           src={image}
           alt=""
           priority
-          className="rounded-full w-14"
         />
       </Link>
     </li>
-  );
+  )
 }
