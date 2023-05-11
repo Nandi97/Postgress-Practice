@@ -20,6 +20,6 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx", "prisma/client.js"],
+  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx", "prisma/client.ts"],
   "exclude": ["node_modules"]
 }
