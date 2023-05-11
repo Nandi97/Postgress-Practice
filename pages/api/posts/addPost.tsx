@@ -23,14 +23,16 @@ export default async function handler(
 
 		//Check title
 
-		if (title.length > 300)
+		if (title.length > 300) {
 			return res
 				.status(403)
 				.json({ message: 'Please write a shorter Title' });
-		if (title.length)
+		}
+		if (!title.length) {
 			return res
 				.status(403)
 				.json({ message: 'Please do not leave this empty' });
+		}
 		try {
 			const result = await prisma.post.create({
 				data: {
