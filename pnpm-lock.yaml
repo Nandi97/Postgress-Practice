@@ -425,7 +425,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       browserslist: 4.21.5
-      caniuse-lite: 1.0.30001486
+      caniuse-lite: 1.0.30001487
       fraction.js: 4.2.0
       normalize-range: 0.1.2
       picocolors: 1.0.0
@@ -471,8 +471,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001486
-      electron-to-chromium: 1.4.387
+      caniuse-lite: 1.0.30001487
+      electron-to-chromium: 1.4.394
       node-releases: 2.0.10
       update-browserslist-db: 1.0.11(browserslist@4.21.5)
     dev: true
@@ -489,8 +489,8 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
-  /caniuse-lite@1.0.30001486:
-    resolution: {integrity: sha512-uv7/gXuHi10Whlj0pp5q/tsK/32J2QSqVRKQhs2j8VsDCjgyruAh/eEXHF822VqO9yT6iZKw3nRwZRSPBE9OQg==}
+  /caniuse-lite@1.0.30001487:
+    resolution: {integrity: sha512-83564Z3yWGqXsh2vaH/mhXfEM0wX+NlBCm1jYHOb97TrTWJEmPTccZgeLTPBUUb0PNVo+oomb7wkimZBIERClA==}
 
   /chokidar@3.5.3:
     resolution: {integrity: sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==}
@@ -561,8 +561,8 @@ packages:
     resolution: {integrity: sha512-+HlytyjlPKnIG8XuRG8WvmBP8xs8P71y+SKKS6ZXWoEgLuePxtDoUEiH7WkdePWrQ5JBpE6aoVqfZfJUQkjXwA==}
     dev: true
 
-  /electron-to-chromium@1.4.387:
-    resolution: {integrity: sha512-tutLf+alr1/0YqJwKPdstVvDLmxmLb5xNyDLNS0RZmenHcEYk9qKfpKDCVZEKJ00JVbnayJm1MZAbYhYDFpcOw==}
+  /electron-to-chromium@1.4.394:
+    resolution: {integrity: sha512-0IbC2cfr8w5LxTz+nmn2cJTGafsK9iauV2r5A5scfzyovqLrxuLoxOHE5OBobP3oVIggJT+0JfKnw9sm87c8Hw==}
     dev: true
 
   /escalade@3.1.1:
@@ -836,8 +836,8 @@ packages:
       next: 13.4.1(react-dom@18.2.0)(react@18.2.0)
       oauth: 0.9.15
       openid-client: 5.4.2
-      preact: 10.13.2
-      preact-render-to-string: 5.2.6(preact@10.13.2)
+      preact: 10.14.0
+      preact-render-to-string: 5.2.6(preact@10.14.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       uuid: 8.3.2
@@ -867,7 +867,7 @@ packages:
       '@next/env': 13.4.1
       '@swc/helpers': 0.5.1
       busboy: 1.6.0
-      caniuse-lite: 1.0.30001486
+      caniuse-lite: 1.0.30001487
       postcss: 8.4.14
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -1013,11 +1013,11 @@ packages:
       postcss: ^8.2.14
     dependencies:
       postcss: 8.4.23
-      postcss-selector-parser: 6.0.12
+      postcss-selector-parser: 6.0.13
     dev: true
 
-  /postcss-selector-parser@6.0.12:
-    resolution: {integrity: sha512-NdxGCAZdRrwVI1sy59+Wzrh+pMMHxapGnpfenDVlMEXoOcvt4pGE0JLK9YY2F5dLxcFYA/YbVQKhcGU+FtSYQg==}
+  /postcss-selector-parser@6.0.13:
+    resolution: {integrity: sha512-EaV1Gl4mUEV4ddhDnv/xtj7sxwrwxdetHdWUGnT4VJQf+4d05v6lHYZr8N573k5Z0BViss7BDhfWtKS3+sfAqQ==}
     engines: {node: '>=4'}
     dependencies:
       cssesc: 3.0.0
@@ -1046,17 +1046,17 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
-  /preact-render-to-string@5.2.6(preact@10.13.2):
+  /preact-render-to-string@5.2.6(preact@10.14.0):
     resolution: {integrity: sha512-JyhErpYOvBV1hEPwIxc/fHWXPfnEGdRKxc8gFdAZ7XV4tlzyzG847XAyEZqoDnynP88akM4eaHcSOzNcLWFguw==}
     peerDependencies:
       preact: '>=10'
     dependencies:
-      preact: 10.13.2
+      preact: 10.14.0
       pretty-format: 3.8.0
     dev: false
 
-  /preact@10.13.2:
-    resolution: {integrity: sha512-q44QFLhOhty2Bd0Y46fnYW0gD/cbVM9dUVtNTDKPcdXSMA7jfY+Jpd6rk3GB0lcQss0z5s/6CmVP0Z/hV+g6pw==}
+  /preact@10.14.0:
+    resolution: {integrity: sha512-4oh2sf208mKAdL5AQtzXxE387iSGNWMX/YjwMjH6m/XROILKAmx5Pbs2FsXrW7ixoVGGjpfYSBB833vOwYxNxw==}
     dev: false
 
   /prettier@2.8.8:
@@ -1269,7 +1269,7 @@ packages:
       postcss-js: 4.0.1(postcss@8.4.23)
       postcss-load-config: 4.0.1(postcss@8.4.23)
       postcss-nested: 6.0.1(postcss@8.4.23)
-      postcss-selector-parser: 6.0.12
+      postcss-selector-parser: 6.0.13
       postcss-value-parser: 4.2.0
       resolve: 1.22.2
       sucrase: 3.32.0
