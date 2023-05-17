@@ -1,11 +1,12 @@
 'use client';
 
-import { useMutation } from '@tanstack/react-query';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import axios from 'axios';
 import Image from 'next/image';
 import { useState } from 'react';
 import { MdDeleteOutline } from 'react-icons/md';
 import Toggle from './Toggle';
+import toast from 'react-hot-toast';
 
 type EditProps = {
 	id: string;
@@ -26,27 +27,29 @@ export default function EditPost({
 	comments,
 	id,
 }: EditProps) {
-	//Toggle
-
 	const [toggle, setToggle] = useState(false);
-
-	//Delete post
+	const queryClient = useQueryClient();
+	let deleteToastID: string;
 
 	const { mutate } = useMutation(
 		async (id: string) =>
-			await axios.delete('/api/post/deletePost', { data: id }),
+			await axios.delete('/api/posts/deletePost', { data: id }),
 		{
 			onError: (error) => {
 				console.log(error);
 			},
-
 			onSuccess: (data) => {
 				console.log(data);
+				queryClient.invalidateQueries(['auth-posts']);
+				toast.success('Post has been deleted.', { id: deleteToastID });
 			},
 		}
 	);
 
 	const deletePost = () => {
+		deleteToastID = toast.loading('Deleting your post.', {
+			id: deleteToastID,
+		});
 		mutate(id);
 	};
 	return (
@@ -65,12 +68,15 @@ export default function EditPost({
 				<div className="my-8">
 					<p className="break-all">{title}</p>
 				</div>
-				<div className="flex items-center gap4">
+				<div className="flex items-center gap-4">
 					<p className="text-sm font-bold text-gray-700">
 						{comments?.length} Comments
 					</p>
 					<button
-						onClick={() => setToggle(true)}
+						onClick={(e) => {
+							e.stopPropagation();
+							setToggle(true);
+						}}
 						className="p-1 text-white bg-red-600 rounded-md hover:opacity-80"
 					>
 						<MdDeleteOutline />

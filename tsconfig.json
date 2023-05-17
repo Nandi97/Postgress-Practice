@@ -20,6 +20,6 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx", "prisma/client.ts"],
+  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx", "prisma/client.ts", "pages/api/posts/deletePost.js"],
   "exclude": ["node_modules"]
 }
