@@ -9,7 +9,7 @@ export default async function Nav() {
 	const session = await getServerSession(authOptions);
 
 	return (
-		<nav className="flex justify-between w-full p-2 bg-white h-14">
+		<nav className="flex justify-between w-full p-2 bg-white h-14 fixed top-0 left-0 right-0">
 			<Link href={'/'}>
 				<h1 className="font-semibold text-black uppercase">SendIt.</h1>
 			</Link>

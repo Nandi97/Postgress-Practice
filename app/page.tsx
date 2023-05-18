@@ -38,7 +38,7 @@ export default function Home() {
 		);
 
 	return (
-		<main className="px-10 pt-4">
+		<div>
 			<AddPost />
 			{data?.map((post) => (
 				<Post
@@ -50,6 +50,6 @@ export default function Home() {
 					postTitle={post.title}
 				/>
 			))}
-		</main>
+		</div>
 	);
 }

@@ -18,10 +18,11 @@ const roboto = Roboto({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable} font-sans bg-slate-300 h-screen`}>
+      <body className={`${roboto.variable} font-sans bg-slate-300 h-screen relative`}>
         <QueryWrapper>
           <Nav />
-        {children}</QueryWrapper>
+          <div className="px-10 pt-4 mt-14">
+        {children}</div></QueryWrapper>
       </body>
     </html>
   );

@@ -6,6 +6,9 @@ import axios from 'axios';
 import { PostType } from '../../types/Post';
 import { Oval } from 'react-loader-spinner';
 import AddComment from '../../components/AddComment';
+import Image from 'next/image';
+import Date from '../../components/Date';
+import { motion } from 'framer-motion';
 
 type URL = {
 	params: {
@@ -41,9 +44,9 @@ export default function PostDetail(url: URL) {
 				/>
 			</div>
 		);
-	console.log(data);
+	// console.log(data);
 	return (
-		<div className="px-10 pt-4">
+		<div>
 			<Post
 				avatar={data?.user.image}
 				name={data?.user.name}
@@ -51,7 +54,36 @@ export default function PostDetail(url: URL) {
 				id={data?.id}
 				comments={data?.comments}
 			/>
+
 			<AddComment id={data?.id} />
+			{data?.comments?.map((comment) => (
+				<motion.div
+					animate={{ opacity: 1, scale: 1 }}
+					initial={{ opacity: 0, scale: 0.8 }}
+					transition={{ ease: 'easeOut' }}
+					key={comment.id}
+					className="p-8 my-8 bg-white rounded-lg"
+				>
+					<div className="flex items-center gap-2 justify-between">
+						<div className="flex items-center gap-2">
+							<Image
+								className="rounded-full"
+								width={32}
+								height={32}
+								src={comment.user.image}
+								alt="avatar"
+							/>
+							<h3 className="font-bold text-gray-700">
+								{comment.user.name}
+							</h3>
+						</div>
+						<Date dateString={comment.createdAt} />
+					</div>
+					<div className="my-8">
+						<p className="break-all">{comment.title}</p>
+					</div>
+				</motion.div>
+			))}
 		</div>
 	);
 }

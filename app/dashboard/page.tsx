@@ -10,11 +10,11 @@ export default async function Dashboard() {
 	}
 
 	return (
-		<main className="px-10 pt-4">
+		<div>
 			<h1 className="text-2xl font-bold">
 				Welcome back {session?.user?.name}
 			</h1>
 			<MyPosts />
-		</main>
+		</div>
 	);
 }

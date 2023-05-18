@@ -22,9 +22,7 @@ export default function Post({ avatar, name, postTitle, id, comments }) {
 			<div className="flex items-center gap-4 cursor-pointer">
 				<Link href={`/post/${id}`}>
 					<p className="text-sm font-bold text-gray-700">
-						{comments.length > 0
-							? `${comments}`
-							: `${comments?.length} Comments`}
+						{comments.length}Comments
 					</p>
 				</Link>
 			</div>
